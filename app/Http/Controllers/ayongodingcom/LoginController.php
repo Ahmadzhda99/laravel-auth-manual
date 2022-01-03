@@ -1,8 +1,9 @@
 <?php
 
-namespace App\Http\Controllers\ayongodingcom;
+namespace App\Http\Controllers\AyoNgodingCom;
 
 use Illuminate\Http\Request;
+use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Auth;
 use Session;
 

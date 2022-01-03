@@ -1,8 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\ayongoding\LoginController as AyoNgodingLogin;
-use App\Http\Controllers\ayongoding\HomeController as AyoNgodingHome;
+use App\Http\Controllers\AyoNgodingCom\LoginController as AyoNgodingLogin;
+use App\Http\Controllers\AyoNgodingCom\HomeController as AyoNgodingHome;
 
 /*
 |--------------------------------------------------------------------------
