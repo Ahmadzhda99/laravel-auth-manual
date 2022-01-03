@@ -1,6 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\ayongoding\LoginController as AyoNgodingLogin;
+use App\Http\Controllers\ayongoding\HomeController as AyoNgodingHome;
 
 /*
 |--------------------------------------------------------------------------
@@ -13,6 +15,8 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', [AyoNgodingLogin::class, 'login'])->name('login');
+Route::post('actionlogin', [AyoNgodingLogin::class, 'actionlogin'])->name('actionlogin');
+
+Route::get('home', [AyoNgodingHome::class, 'index'])->name('home')->middleware('auth');
+Route::get('actionlogout', [AyoNgodingLogin::class, 'actionlogout'])->name('actionlogout')->middleware('auth');
